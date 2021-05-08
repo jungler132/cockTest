@@ -9,7 +9,5 @@ const startScreen = () => {
     return(
         <App/>  
     )
-    
 }
-
 AppRegistry.registerComponent(appName, () => startScreen);

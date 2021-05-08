@@ -1,14 +1,14 @@
 import React from 'react';
 import { View , Text} from 'react-native'
 
-const ZakladkiScreen = () => {
+const AddRecipeScreen = () => {
     return (
       <View  style={{flex:1, justifyContent:'center' , alignItems:'center'}}>
-        <Text>
-            ZAKLADKISCREEN
+        <Text style={{fontSize:20}}>
+          AddRecipeScreen
         </Text>
       </View>
     )
 }
 
-export default ZakladkiScreen;
+export default AddRecipeScreen;

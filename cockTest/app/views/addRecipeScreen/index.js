@@ -1,13 +1,14 @@
 import React from 'react';
 import { View , Text} from 'react-native'
 
-const FriendsScreen = () => {
+const AddRecipeScreen = () => {
     return (
       <View style={{justifyContent:'center', alignItems:'center'}}>
         <Text>
-          FRIENDSSCREEN
+          AddRecipeScreen
         </Text>
       </View>
     )
 }
-export default FriendsScreen;
+
+export default AddRecipeScreen;

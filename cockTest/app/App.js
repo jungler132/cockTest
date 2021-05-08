@@ -1,13 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native'
+import BottomTabs from './modules/navigation/bottomTab';
+
 
 const App = () => {
     return (
-      <View>
-        <Text>
-          QWERTY
-        </Text>
-      </View>
+       <BottomTabs/>
     )
 }
 

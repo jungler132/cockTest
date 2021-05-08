@@ -3,7 +3,8 @@ import Svg, { Circle, Path } from "react-native-svg"
 
 function SvgComponentPlus(props) {
   return (
-    <Svg
+    <Svg 
+      width={25} height={25}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -14,8 +15,8 @@ function SvgComponentPlus(props) {
       {...props}
     >
       <Circle cx={12} cy={12} r={10} />
-      <Path d="M12 8L12 16" />
-      <Path d="M8 12L16 12" />
+      <Path  fill={props.color} d="M12 8L12 16" />
+      <Path  fill={props.color} d="M8 12L16 12" />
     </Svg>
   )
 }

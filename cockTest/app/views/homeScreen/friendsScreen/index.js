@@ -3,7 +3,7 @@ import { View , Text} from 'react-native'
 
 const FriendsScreen = () => {
     return (
-      <View style={{justifyContent:'center', alignItems:'center'}}>
+      <View  style={{flex:1, justifyContent:'center' , alignItems:'center'}}>
         <Text>
           FRIENDSSCREEN
         </Text>

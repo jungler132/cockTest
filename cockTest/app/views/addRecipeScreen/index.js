@@ -3,8 +3,8 @@ import { View , Text} from 'react-native'
 
 const AddRecipeScreen = () => {
     return (
-      <View style={{justifyContent:'center', alignItems:'center'}}>
-        <Text>
+      <View  style={{flex:1, justifyContent:'center' , alignItems:'center'}}>
+        <Text style={{fontSize:20}}>
           AddRecipeScreen
         </Text>
       </View>

@@ -5,7 +5,7 @@ const LaunchScreen = () => {
     return (
       <View style={{backgroundColor:"red" , flex:1 , justifyContent:'center', alignItems:'center'}}>
         <Text style={{fontSize:50 , color:'white'}}>
-          COCKAPP
+          APP
         </Text>
       </View>
     )

@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import reducerLaunch from '../../../views/launchScreen/redux/reducer';
 import rootSaga from '../../saga/rootSaga';
+import { rootReducer } from '../reducers/rootReducers';
 
 
 const sagaMiddleware = createSagaMiddleware();
 
-export const store = createStore(reducerLaunch, applyMiddleware(sagaMiddleware));
+export const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(rootSaga);

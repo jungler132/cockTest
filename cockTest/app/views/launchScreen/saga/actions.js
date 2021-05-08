@@ -7,4 +7,5 @@ export const setLaunchEndTrue = (launchEnd) => ({
 });
 export const runWatcher = () => ({
     type: constants.SET_START,
+    payload : false
 });

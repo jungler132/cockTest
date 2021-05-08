@@ -9,9 +9,9 @@ const App = () => {
 
     const dispatch = useDispatch();
     const launchEnd = useSelector(state => state.reducerLaunch.launchEnd);
-       
     useEffect(() => {
-        dispatch(runWatcher());  
+        dispatch(runWatcher()); 
+        console.log('DISPATCH')
     }, []);
 
     return (

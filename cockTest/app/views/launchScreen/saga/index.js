@@ -1,5 +1,6 @@
-import {put, delay, take} from 'redux-saga/effects';
-import {setLaunchEndTrue, SET_START } from './actions';
+import {put, delay,takeEvery} from 'redux-saga/effects';
+import { constants } from '../redux/constant';
+import {setLaunchEndTrue} from './actions';
 
 export function* workerForLaunch() {
     yield delay(3000);
@@ -7,5 +8,5 @@ export function* workerForLaunch() {
 }
 
 export function* watcherLaunch() {
-    yield take(SET_START, workerForLaunch);
+    yield takeEvery(constants.SET_START, workerForLaunch);
 }

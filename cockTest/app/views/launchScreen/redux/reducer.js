@@ -1,10 +1,11 @@
-import { SET_TRUE } from '../saga/actions';
+import { constants } from './constant'
 export const initialState = {
     launchEnd: true,
 };
 function reducerLaunch(state = initialState, action) {
+    
     switch (action.type) {
-    case SET_TRUE :
+    case constants.SET_TRUE :
         return {
             launchEnd: false,
         };
@@ -13,3 +14,4 @@ function reducerLaunch(state = initialState, action) {
     }
 }
 export default reducerLaunch;
+

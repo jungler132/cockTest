@@ -1,8 +1,13 @@
 import React from 'react';
+import { View, Text } from 'react-native'
 
 const App = () => {
     return (
-      null
+      <View>
+        <Text>
+          QWERTY
+        </Text>
+      </View>
     )
 }
 

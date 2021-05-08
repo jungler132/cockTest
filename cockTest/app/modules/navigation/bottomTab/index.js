@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import AddRecipeScreen from '../../../views/addRecipeScreen';
 import React from 'react'
 import HomeTopTabs from '../topTabNavigator/homeTopTab';
 import SearchTopTabs from '../topTabNavigator/searchTopTab';

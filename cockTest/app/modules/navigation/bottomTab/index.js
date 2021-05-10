@@ -18,10 +18,10 @@ const Tab = createBottomTabNavigator();
 function BottomTabs (){
     return (
         <Tab.Navigator initialRouteName='Home' tabBarOptions={{labelStyle:styles.labelStyle,activeBackgroundColor:colors.racingGreen , inactiveBackgroundColor:colors.racingGreen , tabStyle:styles.tabStyleStyle}}>
-            <Tab.Screen name='Home' component={HomeTopTabs} options={{tabBarLabel:() => <SvgComponentHome color={colors.orange} />}}/>
-            <Tab.Screen name='Search' component={SearchTopTabs} options={{tabBarLabel:() => <SvgComponentSearch color={colors.orange}  />}}/>
-            <Tab.Screen name='Add' component={AddRecipeScreenStack} options={{tabBarLabel:() => <SvgComponentPlus color={colors.orange}  />}}/>
-            <Tab.Screen name='Profile' component={ProfileTopTabs} options={{tabBarLabel:() => <SvgComponentProfile color={colors.orange}  />}}/>
+            <Tab.Screen name='Home' component={HomeTopTabs} options={{tabBarLabel:({ focused }) => (focused ? <SvgComponentHome color={colors.orange}/> : <SvgComponentHome color={colors.white}/>)}}/>
+            <Tab.Screen name='Search' component={SearchTopTabs} options={{tabBarLabel:({ focused }) => (focused ? <SvgComponentSearch color={colors.orange}/> : <SvgComponentSearch color={colors.white}/>)}}/>
+            <Tab.Screen name='Add' component={AddRecipeScreenStack} options={{tabBarLabel:({ focused }) => (focused ? <SvgComponentPlus color={colors.orange}/> : <SvgComponentPlus color={colors.white}/>)}}/>
+            <Tab.Screen name='Profile' component={ProfileTopTabs} options={{tabBarLabel:({ focused }) => (focused ? <SvgComponentProfile color={colors.orange}/> : <SvgComponentProfile color={colors.white}/>)}}/>
         </Tab.Navigator>
     )
 }

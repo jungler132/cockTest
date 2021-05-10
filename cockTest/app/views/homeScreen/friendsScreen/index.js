@@ -1,10 +1,11 @@
 import React from 'react';
 import { View , Text} from 'react-native'
+import { styles } from './styles';
 
 const FriendsScreen = () => {
     return (
-      <View  style={{flex:1, justifyContent:'center' , alignItems:'center'}}>
-        <Text>
+      <View  style={styles.mainViewStyle}>
+        <Text style={styles.textStyle}>
           FRIENDSSCREEN
         </Text>
       </View>

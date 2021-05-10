@@ -4,21 +4,22 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import ReceptScreen from '../../../../views/profileScreen/receptsScreen';
 import ZakladkiScreen from '../../../../views/profileScreen/zakladkiScreen';
 import { TouchableOpacity } from 'react-native';
-
+import { ROUTES } from '../../../../services/routes/index'
+import { styles } from './styles';
 
 
 const Tab = createMaterialTopTabNavigator();
 
 function ProfileTopTabs({navigation}) {
     return (<>
-            <View style={{alignItems:'flex-end' , height:'5%' , justifyContent:'center', backgroundColor:'#282B2A'}}>
-                <TouchableOpacity onPress={() => {navigation.navigate('SettingsScreenStack')}}>
-                    <Text style={{color:'white' , fontSize:14, marginEnd:10}}>
+            <View style={styles.headerViewStyle}>
+                <TouchableOpacity onPress={() => {navigation.navigate(ROUTES.SettingsScreenStack)}}>
+                    <Text style={styles.textStyle}>
                     SETTINGS
                     </Text>
                 </TouchableOpacity>
             </View>
-            <Tab.Navigator tabBarOptions={{indicatorStyle:{backgroundColor:'#FFA500'} , labelStyle:{color:'#FFA500' , fontSize:13} , style:{backgroundColor:'#282B2A'}}}>
+            <Tab.Navigator tabBarOptions={{indicatorStyle:styles.indicatorStyleBackgroundColor , labelStyle:styles.labelStyle , style:styles.tabBackgroundColor}}>
             <Tab.Screen name='ReceptScreen' component={ReceptScreen}/>
             <Tab.Screen name='ZakladkiScreen' component={ZakladkiScreen}/>
             </Tab.Navigator>
@@ -26,4 +27,3 @@ function ProfileTopTabs({navigation}) {
     )
 }
 export default ProfileTopTabs;
-

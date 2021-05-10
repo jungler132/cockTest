@@ -3,6 +3,7 @@ import { View, Text } from 'react-native'
 import { useDispatch } from 'react-redux'
 import { setNavigator } from '../../services/navigationServices';
 import { runWatcher } from '../launchScreen/saga/actions';
+import { styles } from './styles'
 
 const LaunchScreen = ({navigation}) => {
 
@@ -14,8 +15,8 @@ const LaunchScreen = ({navigation}) => {
 }, []);
 
     return (
-      <View style={{backgroundColor:"red" , flex:1 , justifyContent:'center', alignItems:'center'}}>
-        <Text style={{fontSize:50 , color:'white'}}>
+      <View style={styles.mainViewStyle}>
+        <Text style={styles.textStyle}>
           APP
         </Text>
       </View>

@@ -2,15 +2,17 @@ import React from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import FriendsScreen from '../../../../views/homeScreen/friendsScreen';
 import InspireScreen from '../../../../views/homeScreen/inspireScreen';
+import { ROUTES } from '../../../../services/routes/index'
+import { styles } from './styles';
 
 
 const Tab = createMaterialTopTabNavigator();
 
 const HomeTopTabs = () => {
     return (
-        <Tab.Navigator initialRouteName='InspireScreen' tabBarOptions={{indicatorStyle:{backgroundColor:'#FFA500'} , labelStyle:{color:'#FFA500' , fontSize:13} , style:{backgroundColor:'#282B2A'}}}>
-            <Tab.Screen name='FriendsScreen' component={FriendsScreen}/>
-            <Tab.Screen name='InspireScreen' component={InspireScreen}/>
+        <Tab.Navigator initialRouteName={ROUTES.InspireScreen} tabBarOptions={{indicatorStyle:styles.indicatorStyleBackgroundColor , labelStyle:styles.labelStyle , style:styles.tabBackgroundColor}}>
+            <Tab.Screen name={ROUTES.FriendsScreen} component={FriendsScreen}/>
+            <Tab.Screen name={ROUTES.InspireScreen} component={InspireScreen}/>
         </Tab.Navigator>
     )
 }

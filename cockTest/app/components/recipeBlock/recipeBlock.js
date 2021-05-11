@@ -12,7 +12,7 @@ function RecipeBlock() {
     return( 
         <TouchableOpacity style={{flex:1,backgroundColor:colors.racingGreen , paddingTop:10 , borderRadius:7}}>
             <View style={{flex:0.1,backgroundColor:colors.racingGreen , flexDirection:'row' , justifyContent:'flex-start' , alignItems:'center'}}>
-                <Image style={{width:25 , height:25 , borderRadius:100 , backgroundColor:colors.silver}}>
+                <Image style={{width:25 , height:25 , borderRadius:100 , backgroundColor:colors.silver , marginStart:10}}>
                 
                 </Image>
                 <Text style={{color:colors.silver , marginStart:15}}>

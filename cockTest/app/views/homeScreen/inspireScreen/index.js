@@ -8,10 +8,10 @@ const InspireScreen = () => {
   const Vana = [1,1,1,1,1,1,1,1]
 
     return (
-      <View style={{flex:1}}>
+      <View style={{flex:1 , backgroundColor:colors.silver}}>
         <ScrollView style={{flex:1}}>
             {Vana.map((item , index) => (
-              <View style={{width:180 , height:'40%', borderRadius:50}}>
+              <View style={{width:180 , height:'40%', borderRadius:50 , marginBottom:10 , marginStart:10}}>
                 <RecipeBlock key={index}/>
               </View>
           

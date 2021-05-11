@@ -16,8 +16,8 @@ function SearchTopTabs() {
         <>
         <SearchComponent/>
         <Tab.Navigator tabBarOptions={{indicatorStyle:styles.indicatorStyleBackgroundColor , labelStyle:styles.labelStyle , style:styles.tabBackgroundColor}}>
-            <Tab.Screen name='NewRecipeScreen' component={NewRecipeScreen}/>
-            <Tab.Screen name='CheckedRecipeScreen' component={CheckedRecipeScreen}/>
+            <Tab.Screen name='Trand' component={NewRecipeScreen}/>
+            <Tab.Screen name='Old' component={CheckedRecipeScreen}/>
         </Tab.Navigator>
         </>
         // </View>

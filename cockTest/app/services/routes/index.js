@@ -1,5 +1,5 @@
 export const ROUTES = {
-    InspireScreen:'InspireScreen',
+    InspireScreen:'New Recipe',
     FriendsScreen:'FriendsScreen',
     ReceptScreen:'ReceptScreen',
     ZakladkiScreen:'ZakladkiScreen',

@@ -1,8 +1,9 @@
+import { colors } from '../../../services/config/colors'
+
 export const styles = {
     mainViewStyle:{
         flex:1,
-        justifyContent:'center',
-        alignItems:'center'
+        backgroundColor:colors.racingGreen
     }, 
     textStyle:{
         fontSize:20

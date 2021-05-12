@@ -10,8 +10,8 @@ const NewRecipeScreen = () => {
     return (
       <View  style={styles.mainViewStyle}>
         <ScrollView contentContainerStyle={{justifyContent:'space-evenly' , alignItems:'flex-start'}}>
-          {array.map(() => (
-           <TrandRecipeComponent/>
+          {array.map((index) => (
+           <TrandRecipeComponent key={index}/>
           ))}
         </ScrollView>
       </View>

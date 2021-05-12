@@ -1,0 +1,1 @@
+export const getDataForHomeScreen = (state) => state.reducerForInspire.data;

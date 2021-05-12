@@ -1,11 +1,8 @@
 import React from 'react';
 import { Image } from 'react-native';
-import { ImageBackground } from 'react-native';
 import { ScrollView } from 'react-native';
-import { TextInput } from 'react-native';
 import { View , Text , TouchableOpacity} from 'react-native';
 import SvgComponentFood from '../../assets/svg/simplefastfoodicon';
-import { colors } from '../../services/config/colors';
 import { styles } from './styles';
 
 const AddRecipeScreen = () => {

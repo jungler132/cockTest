@@ -1,15 +1,15 @@
-import { strings } from "../../localization";
+import storeData from './saveAsync'
 
-const sendRequest = async(contentType) => {
+const sendRequest = async() => {
+
     try {
-        const response = await fetch(strings.urlRequest + contentType, {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
-        });
-
-        return await response.json();
+        const responce = await fetch('https://forkify-api.herokuapp.com/api/search?q=pizza', {
+          method: 'GET'
+        })
+        storeData(responce.json)
+        return await responce.json();
     } catch (error) {
-        console.log('Something went wrong! ', error);
+        console.log('ERROR --->', error);
     }
 };
 

@@ -10,30 +10,28 @@ import getData from '../../../services/api/getSearchableData';
 
 const InspireScreen = () => {
 
-  const arr = [1,2,3]
-  
   const dispatch = useDispatch();
-  // const data = useSelector(getDataForHomeScreen)
-  const data = getData();
-  console.log(data)
+  const data = useSelector(getDataForHomeScreen)
+  //const data = getData();
+  // console.log(data)
 
   const countRecipes = data?.count;
-  console.log('countRecipes',countRecipes)
+  // console.log('countRecipes--->',countRecipes)
   const recipes = data?.recipes
-  console.log('recipes',recipes)
+  // console.log('recipes--->',recipes)
+
 
   useEffect(() => {
     dispatch(getRecipesHomeScreen())
   },[])
 
-  const Vana = [1,1,1,1,1,1,1,1]
     return (
       <View style={styles.mainViewStyle}>
         <ScrollView style={styles.sctollViewStyle}>
           <View style={{flex:1 ,alignItems:'flex-start', justifyContent:'center'}}>
-            {arr.map((item , index) => (
+            {recipes?.map((item , index) => (
               <View style={styles.insideViewStyle}>
-                <RecipeBlock key={index} publisher={item.publisher} imageUrl={item.image_url} title={item.title}/>
+                <RecipeBlock key={index} publisher={item.publisher} imageUrl={item.image_url} title={item.title} recipeId={item.recipe_id}/>
               </View>
         ))}
         </View>

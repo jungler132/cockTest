@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react'
 import LaunchScreen from '../../../../views/launchScreen';
+import RecipeById from '../../../../views/recipeById/recipeById';
 import BottomTabs from '../../bottomTab';
 import SettingsScreenStack from '../../stackScreens/settingsScreen/stackNavigator';
 
@@ -16,6 +17,7 @@ function RootStack() {
             <Stack.Screen name='LaunchScreen' component={LaunchScreen}/>
             <Stack.Screen name='BottomTabs' component={BottomTabs}/>
             <Stack.Screen name="SettingsScreenStack" component={SettingsScreenStack}/>
+            <Stack.Screen name='RecipeById' component={RecipeById}/>
         </Stack.Navigator>
         
     )

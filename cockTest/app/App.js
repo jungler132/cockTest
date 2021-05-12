@@ -4,7 +4,7 @@ import RecipeById from './views/recipeById/recipeById';
 
 const App = () => {
     return (
-        <RecipeById/>
+        <RootStack/>
     )
 }
 

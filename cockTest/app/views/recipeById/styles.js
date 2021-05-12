@@ -1,21 +1,119 @@
-import { colors } from '../../../services/config/colors'
+import { colors } from '../../services/config/colors'
 
 export const styles = {
-    mainViewStyle:{
+    mainScrollViewStyle:{
         flex:1,
-        backgroundColor:colors.silver
-    }, 
-    sctollViewStyle:{
-        flex:1
+        backgroundColor:colors.racingGreen
     },
-    insideViewStyle : {
-        flex:1,
-        width:180,
+    topViewStyle: {
+        flex:0.5
+    },
+    imageBackgroundStyle:{
+        width:'100%',
         height:300,
-        borderRadius:50,
-        marginBottom:10,
+        alignItems:'flex-end'
+    },
+    favoriteButtonFlexStyle:{
+        marginTop:10,
+        marginEnd:10,
+        alignItems:'flex-end',
+        width:35
+    },
+    goBackButtonFlexStyle:{
+        marginStart:10,
+        marginTop:-35,
+        width:40,
+        marginEnd:340
+    },
+    topViewStyle:{
+        flex:0.5,
+        backgroundColor:colors.racingGreen,
+        alignItems:'center'
+    },
+    topTextMealStyle:{
+        fontSize:25,
+        color:colors.white,
         marginStart:10,
         marginTop:10
+    },
+    publisherViewStyle:{
+        flexDirection:'row',
+        alignItems:'center',
+        marginStart:10,
+        marginTop:10,
+        backgroundColor:colors.racingGreen,
+        width:'95%'
+    },
+    publisherImageStyle:{
+        width:50,
+        height:50,
+        borderRadius:100
+    },
+    publisherTextStyle:{
+        color:colors.white,
+        marginStart:15,
+        fontSize:15
+    },
+    tipViewStyle:{
+        backgroundColor:colors.racingGreen,
+        width:'100%',
+        marginTop:10
+    },
+    tipTextStyle:{
+        color:'white',
+        marginStart:15,
+        fontSize:15
+    },
+    lineStyle:{
+        width:'95%',
+        marginStart:10,
+        backgroundColor:colors.silver,
+        height:1,
+        marginTop:20
+    },
+    ingredientsViewStyle:{
+        marginStart:10,
+        width:'95%',
+        marginTop:10
+    },
+    ingredientsTextStyle:{
+        fontSize:25,
+        color:colors.white
+    },
+    ingredientLineViewStyle:{
+        marginTop:20
+    },
+    ingredientLineTextStyle:{
+        fontSize:15,
+        marginStart:10,
+        color:colors.white
+    },
+    bottomProfileInfoViewStyle:{
+        justifyContent:'center',
+        alignItems:'center',
+        marginTop:20
+    },
+    bottomProfileInfoImageStyle:{
+        width:80,
+        height:80,
+        borderRadius:100
+    },
+    bottomProfileInfoTextStyle:{
+        color:colors.silver,
+        fontSize:13,
+        marginTop:10
+    },
+    bottomProfileInfoTextNameStyle:{
+        color:colors.white,
+        fontSize:18,
+        marginTop:10,
+        marginBottom:50
     }
+
+
+
+
+
+
 
 }

@@ -2,18 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { View, Image , Text } from 'react-native';
 import { colors } from '../../services/config/colors'
 import { styles } from './styles';
-import { strings } from '../../localization/index'
 import { TouchableOpacity } from 'react-native';
 import SvgComponentFavorite from '../../assets/svg/Simple-Heart'
 import { ImageBackground } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useNavigation } from '@react-navigation/core';
 
 
 
-function RecipeBlock({onPressFav , onPress , imageUrl , publisher , title}) {
+function RecipeBlock({onPressFav  , imageUrl , publisher , title , recipeId}) {
 
+    const navigation = useNavigation()
+    
     return( 
-        <TouchableOpacity onPress={onPress} style={styles.mainTouchableOpacityStyle}>
+        <TouchableOpacity onPress={() => {navigation.navigate('RecipeById' , recipeId)}} style={styles.mainTouchableOpacityStyle}>
             <View style={styles.mainViewStyle}>
                 <Image style={styles.imageStyle}/>
                 <Text style={styles.textStyle}>
@@ -29,6 +30,7 @@ function RecipeBlock({onPressFav , onPress , imageUrl , publisher , title}) {
             </View>
             <Text style={styles.bottomSideTextStyle}>
                 {title}
+                {/* {recipeId} */}
             </Text>
         </TouchableOpacity>
         

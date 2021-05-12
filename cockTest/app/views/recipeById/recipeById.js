@@ -16,31 +16,16 @@ import { getRecipeByIdScreen } from './saga/actions';
 const RecipeById = ({route}) => {
 
     const { key , name , params } = route
-
-    console.log('params-->',params)
-    const array = [1,2,3,4,5,6,7]
     const navigation = useNavigation();
     const dispatch = useDispatch();
     const data = useSelector(getRecipeIdData);
 
-
-
-    console.log('data---->' , data)
-
     const { recipe } = data
-    
-    console.log('recipe---->' , recipe)
-
-    
 
     const title = recipe?.title
-    //console.log('title---->' , title)
     const publisher = recipe?.publisher;
-    //console.log('publisher---->' , publisher)
     const ingredients = recipe?.ingredients;
-    //console.log('ingredients---->' , ingredients)
     const imageUrl = recipe?.image_url;
-    //console.log('imageUrl---->' , imageUrl)
     const publisherUrl = recipe?.publisher_url
 
     useEffect(() => {

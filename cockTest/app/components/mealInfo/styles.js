@@ -1,0 +1,53 @@
+import { colors } from '../../services/config/colors'
+
+export const styles = {
+    lineStyle:{
+        width:'90%',
+        marginStart:10,
+        backgroundColor:colors.silver,
+        height:1,
+        marginTop:20
+    },
+    mainTouchableOpacityViewStyle:{
+        flex:0.3,
+        flexDirection:'row',
+        borderRadius:10,
+        marginStart:5,
+        marginTop:5,
+        marginEnd:5,
+        marginBottom:5,
+    },
+    leftSideViewStyle:{
+        backgroundColor:colors.racingGreen,
+        width:"70%",
+        height:'100%',
+        borderBottomLeftRadius:10,
+        borderTopLeftRadius:10
+    },
+    titleMealTextStyle:{
+        fontSize:20,
+        color:colors.white,
+        marginStart:10,
+        marginTop:5
+    },
+    ingredientsTextStyle:{
+        color:colors.silver,
+        fontSize:15,
+        marginStart:10,
+        marginTop:10
+    },
+    publisherNameTextStyle:{
+        fontSize:18,
+        color:colors.white,
+        marginStart:10,
+        marginTop:20
+    },
+    mealImageStyle:{
+        backgroundColor:colors.humbrol,
+        width:'30%',
+        height:'100%',
+        borderTopRightRadius:10,
+        borderBottomRightRadius:10
+    }
+
+}

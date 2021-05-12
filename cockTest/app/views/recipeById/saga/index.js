@@ -1,8 +1,6 @@
 import {takeEvery, put, call, select} from 'redux-saga/effects';
 import { constants } from './actions';
-import sendRequest from '../../../services/api/request'
 import sendRequestById from '../../../services/api/requestById';
-import { setRecipeByIdScreen } from '../redux/actions';
 import { getRecipeIdForMap } from '../../../modules/saga/selectors';
 import { setRecipeIdData } from '../redux/actions'
 

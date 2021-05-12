@@ -5,11 +5,11 @@ import { styles } from '../checkedRecipeScreen/styles';
 import TrandRecipeComponent from '../../../components/trandRecipeBlock/trandRecipeBlock'
 
 const NewRecipeScreen = () => {
-  const array = [1,1,1,1,1,1,1,1]
+  const array = [1,2,3,4,5,6,7,8,9]
 
     return (
       <View  style={styles.mainViewStyle}>
-        <ScrollView contentContainerStyle={{justifyContent:'space-evenly' , alignItems:'flex-start'}}>
+        <ScrollView contentContainerStyle={{flexWrap:'wrap' , flexDirection:'row'}}>
           {array.map((index) => (
            <TrandRecipeComponent key={index}/>
           ))}

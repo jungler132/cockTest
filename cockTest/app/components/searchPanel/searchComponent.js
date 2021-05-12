@@ -7,13 +7,15 @@ import { styles } from './styles';
 import { strings } from '../../localization/index'
 
 function SearchComponent() {
+
     const [text , setText] = useState('Search Recipe')
+
     return( 
         <View style={styles.mainViewStyle}>
             <View style={styles.imageLoopStyle}>
                 <SvgComponentSearch color={colors.white}/>
             </View>
-            <TextInput  onChangeText={entered => setText(entered)} value={text}  style={styles.textInputStyle} placeholder={strings.searchByRecipe} placeholderTextColor={colors.white}/> 
+            <TextInput  onChangeText={entered => setText(entered)} style={styles.textInputStyle} placeholder={strings.searchByRecipe} placeholderTextColor={colors.white}/> 
         </View>
     )
 }

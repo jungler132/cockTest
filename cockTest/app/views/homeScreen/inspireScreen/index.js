@@ -12,31 +12,22 @@ const InspireScreen = () => {
 
   const dispatch = useDispatch();
   const data = useSelector(getDataForHomeScreen)
-  //const data = getData();
-  // console.log(data)
-
   const countRecipes = data?.count;
-  // console.log('countRecipes--->',countRecipes)
   const recipes = data?.recipes
-  // console.log('recipes--->',recipes)
-
 
   useEffect(() => {
     dispatch(getRecipesHomeScreen())
   },[])
 
     return (
-      <View style={styles.mainViewStyle}>
-        <ScrollView style={styles.sctollViewStyle}>
-          <View style={{flex:1 ,alignItems:'flex-start', justifyContent:'center'}}>
+        <ScrollView style={styles.scrollViewStyle} contentContainerStyle={styles.contentCOntainerStyle}>
             {recipes?.map((item , index) => (
               <View style={styles.insideViewStyle}>
-                <RecipeBlock key={index} publisher={item.publisher} imageUrl={item.image_url} title={item.title} recipeId={item.recipe_id}/>
+                   <RecipeBlock key={index} publisher={item.publisher} imageUrl={item.image_url} title={item.title} recipeId={item.recipe_id}/>
               </View>
+               
         ))}
-        </View>
         </ScrollView>
-        </View>
     )
 }
 

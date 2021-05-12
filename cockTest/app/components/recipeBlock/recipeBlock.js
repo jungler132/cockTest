@@ -14,9 +14,9 @@ function RecipeBlock({onPressFav  , imageUrl , publisher , title , recipeId}) {
     const navigation = useNavigation()
     
     return( 
-        <TouchableOpacity onPress={() => {navigation.navigate('RecipeById' , recipeId)}} style={styles.mainTouchableOpacityStyle}>
+        <TouchableOpacity>
+        <View onPress={() => {navigation.navigate('RecipeById' , recipeId)}} style={styles.mainTouchableOpacityStyle}>
             <View style={styles.mainViewStyle}>
-                <Image style={styles.imageStyle}/>
                 <Text style={styles.textStyle}>
                  {publisher}
                 </Text>
@@ -32,6 +32,7 @@ function RecipeBlock({onPressFav  , imageUrl , publisher , title , recipeId}) {
                 {title}
                 {/* {recipeId} */}
             </Text>
+        </View>
         </TouchableOpacity>
         
     )

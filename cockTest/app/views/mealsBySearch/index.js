@@ -6,7 +6,7 @@ import SvgComponentGoBack from '../../assets/svg/goBack'
 import MealsInfo from '../../components/mealInfo/mealInfo';
 import { useNavigation } from '@react-navigation/core';
 
-const MealsBySeacrh = () => {
+const MealsBySeacrh = ({route}) => {
 
     const tempArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
@@ -14,22 +14,22 @@ const MealsBySeacrh = () => {
 
     return (
       <>
-      <View style={{width:'100%' , height:50 , backgroundColor:colors.racingGreen, flexDirection:'row'}}>
-        <TouchableOpacity onPress={() => navigation.goBack(null)} style={{marginTop:5 , marginStart:5 , backgroundColor:colors.racingGreen}}>
+      <View style={styles.mainViewStyle}>
+        <TouchableOpacity onPress={() => navigation.goBack(null)} style={styles.goBackButtonPosition}>
           <SvgComponentGoBack/>
         </TouchableOpacity>
-        <View style={{justifyContent:'center' , alignItems:'center' , marginStart:90}}>
-          <Text numberOfLines={1} style={{fontSize:25 , color:colors.white}}>
+        <View style={styles.bottomViewStyle}>
+          <Text numberOfLines={1} style={styles.titleNameStyle}>
           Quick Meal
           </Text>
         </View>
       </View>
-      <ScrollView style={{flex:1 , backgroundColor:colors.silver}}>
-        <Text style={{color:colors.white , fontSize:25 , marginStart:10,marginTop:10}}>
+      <ScrollView style={styles.scrollViewStyle}>
+        <Text style={styles.allRecipeStyle}>
           All recipes(62)
         </Text>
         {tempArr.map(() => (
-          <MealsInfo/>
+          <MealsInfo data={route}/>
         ))}
       </ScrollView>
       </>

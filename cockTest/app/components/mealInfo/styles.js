@@ -40,7 +40,8 @@ export const styles = {
         fontSize:18,
         color:colors.white,
         marginStart:10,
-        marginTop:20
+        marginTop:10,
+        marginBottom:10
     },
     mealImageStyle:{
         backgroundColor:colors.humbrol,

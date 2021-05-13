@@ -2,7 +2,7 @@ import storeData from './saveAsync'
 
 const sendRequestRandom = async() => {
 
-    const arrayOfMeal = ['carrot','broccoli','cucumber','apple','melon','papaya','strawberry','chicken','fish','bacon',]
+    const arrayOfMeal = ['carrot','broccoli','cucumber','apple','melon','papaya','strawberry','chicken','fish','bacon', 'radish','artichoke','saffron','grapefruit','mandarin','pizza','popcorn','steak','kebab','chili',]
 
     const randomMeal = arrayOfMeal[Math.floor(Math.random()*arrayOfMeal.length)];
 

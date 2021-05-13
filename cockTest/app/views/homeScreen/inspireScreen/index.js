@@ -12,7 +12,6 @@ const InspireScreen = () => {
 
   const dispatch = useDispatch();
   const data = useSelector(getDataForHomeScreen)
-  const countRecipes = data?.count;
   const recipes = data?.recipes
 
   useEffect(() => {

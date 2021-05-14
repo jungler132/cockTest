@@ -12,7 +12,6 @@ const Tab = createMaterialTopTabNavigator();
 
 function SearchTopTabs() {
     return (
-        // <View style={{flex:1 , justifyContent:'space-around', backgroundColor:"blue"}}>
         <>
         <SearchComponent/>
         <Tab.Navigator tabBarOptions={{indicatorStyle:styles.indicatorStyleBackgroundColor , labelStyle:styles.labelStyle , style:styles.tabBackgroundColor}}>
@@ -20,7 +19,6 @@ function SearchTopTabs() {
             <Tab.Screen name='Old' component={CheckedRecipeScreen}/>
         </Tab.Navigator>
         </>
-        // </View>
     )
 }
 export default SearchTopTabs;

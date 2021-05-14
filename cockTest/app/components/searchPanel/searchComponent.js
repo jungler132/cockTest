@@ -5,17 +5,17 @@ import SvgComponentSearch from '../../assets/svg/search';
 import { colors } from '../../services/config/colors'
 import { styles } from './styles';
 import { strings } from '../../localization/index'
+import { useNavigation } from '@react-navigation/core';
 
 function SearchComponent() {
-
-    const [text , setText] = useState('Search Recipe')
-
+    const navigation = useNavigation();
+    const [text , setText] = useState('')
     return( 
         <View style={styles.mainViewStyle}>
             <View style={styles.imageLoopStyle}>
                 <SvgComponentSearch color={colors.white}/>
             </View>
-            <TextInput  onChangeText={entered => setText(entered)} style={styles.textInputStyle} placeholder={strings.searchByRecipe} placeholderTextColor={colors.white}/> 
+            <TextInput onEndEditing={() => {navigation.navigate('ByNameStack' , text)}} onChangeText={value => setText(value)} style={styles.textInputStyle} placeholder={strings.searchByRecipe} placeholderTextColor={colors.white}/> 
         </View>
     )
 }

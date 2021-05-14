@@ -10,14 +10,12 @@ import { mealByNameWatcher } from './saga/actions';
 import { getMealByNameData } from '../../modules/saga/selectors'
 
 const MealsBySeacrh = ({route}) => {
-  
+
     const { key , dataT , params } = route;
-    const mealName = params?.route?.params?.name;
-    const tempArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    const mealName = params?.route?.params?.name || params?.route?.params;
     const dispatch = useDispatch();
     const data = useSelector(getMealByNameData);
     const navigation = useNavigation();
-    console.log(data)
     const { count } = data;
     const { recipes } = data;
 

@@ -1,4 +1,5 @@
 import { spawn } from 'redux-saga/effects';
+import { watcherFavData } from '../../components/recipeBlock/saga';
 import { watcherHomeScreen } from '../../views/homeScreen/inspireScreen/saga';
 import { watcherLaunch } from '../../views/launchScreen/saga';
 import { watcherMealByNameScreen } from '../../views/mealsBySearch/saga/index'
@@ -12,4 +13,5 @@ export default function* rootSaga() {
     yield spawn(watcherRecipeById);
     yield spawn(watcherRandomRecipe);
     yield spawn(watcherMealByNameScreen);
+    yield spawn(watcherFavData);
 }

@@ -1,7 +1,6 @@
 import React from 'react';
-import ByNameStack from './modules/navigation/stackScreens/byNameStack/stackNavigator';
 import RootStack from './modules/navigation/stackScreens/rootStack/rootStack';
-import RecipeBlock from './components/recipeBlock/recipeBlock'
+import AddRecipeComponent from './components/addRecipeComponent/addRecipeComponent';
 
 const App = () => {
     return (

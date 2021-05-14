@@ -4,11 +4,13 @@ import {reducerForInspire} from '../../../views/homeScreen/inspireScreen/redux/r
 import {reducerForRecipeById} from '../../../views/recipeById/redux/reducer'
 import { reducerForRandomRecipes } from '../../../views/searchScreen/newRecipeScreen/redux/reducer'
 import  reducerMealByName  from '../../../views/mealsBySearch/redux/reducer'
+import reducerFavData from '../../../components/recipeBlock/redux/reducer'
 
 export const rootReducer = combineReducers({
     reducerLaunch,
     reducerForInspire,
     reducerForRecipeById,
     reducerForRandomRecipes,
-    reducerMealByName
+    reducerMealByName,
+    reducerFavData,
 });

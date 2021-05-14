@@ -1,7 +1,9 @@
 import storeData from './saveAsync'
 
+
+
+
 const sendRequestByName = async(name) => {
-    console.log('name inside sendRequest', name)
     try {
         const responce = await fetch('https://forkify-api.herokuapp.com/api/search?q='+ name, {
           method: 'GET'

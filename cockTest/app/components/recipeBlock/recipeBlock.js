@@ -6,12 +6,22 @@ import { TouchableOpacity } from 'react-native';
 import SvgComponentFavorite from '../../assets/svg/Simple-Heart'
 import { ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
+import { setFavData } from './redux/actions'
+import { useDispatch } from 'react-redux';
+import { favDataWatcher } from './saga/actions';
 
 
-
-function RecipeBlock({onPressFav  , imageUrl , publisher , title , recipeId}) {
-
+function RecipeBlock({imageUrl , publisher , title , recipeId}) {
+    const [isFavorite , setFavorite] = useState(false);
+    console.log(isFavorite)
     const navigation = useNavigation()
+    const dispatch = useDispatch();
+
+    function onPressHeart() {
+        setFavorite(!isFavorite);
+        dispatch(favDataWatcher())
+        dispatch(setFavData({publisher ,title ,recipeId ,imageUrl}))
+    }
     
     return( 
         <TouchableOpacity onPress={() => {navigation.navigate('RecipeById' , recipeId)}} style={styles.mainTouchableOpacityStyle}>
@@ -23,14 +33,13 @@ function RecipeBlock({onPressFav  , imageUrl , publisher , title , recipeId}) {
             </View>
             <View style={styles.bottomViewStyle}>
                 <ImageBackground source={{uri:imageUrl}} style={styles.imageBackgroundStyle}>
-                    <TouchableOpacity onPress={onPressFav} style={styles.favoriteButtonOpacityPosition}>
-                        <SvgComponentFavorite color={colors.orange}/>   
+                    <TouchableOpacity onPress={() => onPressHeart()} style={styles.favoriteButtonOpacityPosition}>
+                        <SvgComponentFavorite color={isFavorite ? colors.orange : null}/>   
                     </TouchableOpacity>
                 </ImageBackground>
             </View>
             <Text style={styles.bottomSideTextStyle}>
                 {title}
-                {/* {recipeId} */}
             </Text>
         </View>
         </TouchableOpacity>

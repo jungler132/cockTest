@@ -14,14 +14,11 @@ import { getRecipeByIdScreen } from './saga/actions';
 
 
 const RecipeById = ({route}) => {
-
     const { key , name , params } = route
     const navigation = useNavigation();
     const dispatch = useDispatch();
     const data = useSelector(getRecipeIdData);
-
     const { recipe } = data
-
     const title = recipe?.title
     const publisher = recipe?.publisher;
     const ingredients = recipe?.ingredients;

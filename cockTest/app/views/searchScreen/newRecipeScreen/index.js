@@ -20,7 +20,7 @@ const NewRecipeScreen = () => {
     {image:'https://www.spicemountain.co.uk/wp-content/uploads/2019/10/apple.jpg', name:'apple'},
     {image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWvTwuqbZQ6YXRuk9QWmE5ooAp9YZ3MviXkw&usqp=CAU', name:'melon'},
     {image:'https://s01.sgp1.cdn.digitaloceanspaces.com/article/143395-pysnzzzleh-1593090551.jpg', name:'hamburger'},
-    {image:'https://img2.10bestmedia.com/Images/Photos/380699/GettyImages-855447930_54_990x660.jpg', name:'ice'},
+    {image:'https://cdn.loveandlemons.com/wp-content/uploads/2019/07/salad.jpg', name:'salad'},
     {image:'https://thenovicechefblog.com/wp-content/uploads/2012/01/How-to-cook-bacon-in-the-oven-1-sm-720x405.jpg', name:'bacon'},
     {image:'https://i8.amplience.net/i/traeger/20190309_Smoked-Peppered-Beef-Tenderloin_RE_HE_M?w=1200&sm=aspect&aspect=2:1&scaleFit=poi&$poi2$', name:'beef'},
     {image:'https://cdn8.dissolve.com/p/D2115_169_346/D2115_169_346_1200.jpg', name:'fish'},

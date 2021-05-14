@@ -14,6 +14,7 @@ export const styles = {
     },
     titleNameStyle:{
         fontSize:25,
+        marginStart:20,
         color:colors.white
     },
     scrollViewStyle:{

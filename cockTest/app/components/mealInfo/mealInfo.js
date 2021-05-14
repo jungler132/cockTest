@@ -1,25 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View , Text , Image, TouchableOpacity} from 'react-native'
 import { styles } from './styles';
+import { useNavigation } from '@react-navigation/core';
 
+const MealsInfo = ({title , publisher , imageUrl , publisherUrl , recipeId}) => {
 
-const MealsInfo = () => {
-
+  const navigation = useNavigation();
+    
     return (
-      <TouchableOpacity style={styles.mainTouchableOpacityViewStyle}>
+      <TouchableOpacity onPress={() => {navigation.navigate('RecipeById' , recipeId)}} style={styles.mainTouchableOpacityViewStyle}>
           <View style={styles.leftSideViewStyle}> 
           <Text style={styles.titleMealTextStyle}>
-              Quick pasta meal
+              {title}
           </Text>
           <Text numberOfLines={5} style={styles.ingredientsTextStyle}>
-          In the process of writing one web application, it became necessary to test PHP code that intensively interacts with the MySQL database. The project used the xUnit port - PHPUnit as a unit testing framework. As a result, it was decided to write tests for modules that directly interact with the base, picking up the PHPUnit / DbUnit plugin. Next, I will talk about the difficulties that arose when writing tests and how I overcame them. In response, I would like to receive comments from knowledgeable people regarding the correctness of my decisions.
+            {publisherUrl}
           </Text>
           <View style={styles.lineStyle}/>
           <Text style={styles.publisherNameTextStyle}>
-              Natasha Nagpal
+              {publisher}
           </Text>
           </View>
-          <Image style={styles.mealImageStyle} source={{uri:'http://forkify-api.herokuapp.com/images/Pizza2BDip2B12B500c4c0a26c.jpg'}} />
+          <Image style={styles.mealImageStyle} source={{uri:imageUrl}}/>
       </TouchableOpacity>
     )
 }

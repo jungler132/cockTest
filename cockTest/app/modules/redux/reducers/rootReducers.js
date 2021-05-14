@@ -3,10 +3,12 @@ import reducerLaunch from "../../../views/launchScreen/redux/reducer";
 import {reducerForInspire} from '../../../views/homeScreen/inspireScreen/redux/reducer'
 import {reducerForRecipeById} from '../../../views/recipeById/redux/reducer'
 import { reducerForRandomRecipes } from '../../../views/searchScreen/newRecipeScreen/redux/reducer'
+import  reducerMealByName  from '../../../views/mealsBySearch/redux/reducer'
 
 export const rootReducer = combineReducers({
     reducerLaunch,
     reducerForInspire,
     reducerForRecipeById,
-    reducerForRandomRecipes
+    reducerForRandomRecipes,
+    reducerMealByName
 });

@@ -7,10 +7,10 @@ import MealsBySeacrh from '../../../../views/mealsBySearch';
 const ByName = createStackNavigator();
 
 
-const ByNameStack = () => {
+const ByNameStack = ({route}) => {
     return (
         <ByName.Navigator headerMode={false}>
-            <ByName.Screen name='MealsBySeacrh' component={MealsBySeacrh}/>
+            <ByName.Screen name='MealsBySeacrh' component={MealsBySeacrh} initialParams={{route}}/>
         </ByName.Navigator>
         
     )

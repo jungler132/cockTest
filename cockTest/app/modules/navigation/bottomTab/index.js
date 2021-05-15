@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 
 function BottomTabs (){
     return (
-        <Tab.Navigator initialRouteName='Home' tabBarOptions={{labelStyle:styles.labelStyle,activeBackgroundColor:colors.racingGreen , inactiveBackgroundColor:colors.racingGreen , tabStyle:styles.tabStyleStyle}}>
+        <Tab.Navigator initialRouteName='Home' tabBarOptions={{labelStyle:styles.labelStyle,activeBackgroundColor:colors.racingGreen , inactiveBackgroundColor:colors.racingGreen , tabStyle:styles.tabStyleStyle , keyboardHidesTabBar:true}}>
             <Tab.Screen name='Home' component={HomeTopTabs} options={{tabBarLabel:({ focused }) => (focused ? <SvgComponentHome color={colors.orange}/> : <SvgComponentHome color={colors.white}/>)}}/>
             <Tab.Screen name='Search' component={SearchTopTabs} options={{tabBarLabel:({ focused }) => (focused ? <SvgComponentSearch color={colors.orange}/> : <SvgComponentSearch color={colors.white}/>)}}/>
             <Tab.Screen name='Add' component={AddRecipeScreenStack} options={{tabBarLabel:({ focused }) => (focused ? <SvgComponentPlus color={colors.orange}/> : <SvgComponentPlus color={colors.white}/>)}}/>

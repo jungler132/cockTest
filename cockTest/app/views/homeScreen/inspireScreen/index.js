@@ -21,7 +21,7 @@ const InspireScreen = () => {
     return (
         <ScrollView style={styles.scrollViewStyle} contentContainerStyle={styles.contentCOntainerStyle}>
             {recipes?.map((item , index) => (
-              <View style={styles.insideViewStyle}>
+              <View key={index} style={styles.insideViewStyle}>
                    <RecipeBlock key={index} publisher={item.publisher} imageUrl={item.image_url} title={item.title} recipeId={item.recipe_id}/>
               </View>
                

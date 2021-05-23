@@ -12,18 +12,17 @@ import { favDataWatcher } from './saga/actions';
 import { getFavDataFromStore } from '../../modules/saga/selectors';
 
 
-function RecipeBlock({imageUrl , publisher , title , recipeId}) {
+function RecipeBlock({imageUrl , publisher , title , recipeId , fav}) {
     const [isFavorite , setFavorite] = useState(false);
     const navigation = useNavigation()
     const favData = useSelector(getFavDataFromStore)
+    // console.log(favData)
     console.log('favData in side Recipe Blockl',favData)
     const dispatch = useDispatch();
-    function onPressHeart() {
-        if(!isFavorite){
+    const onPressHeart = () => {
         setFavorite(!isFavorite);
         dispatch(favDataWatcher())
-        dispatch(setFavData({publisher,title,recipeId ,imageUrl,isFavorite}))
-        }
+        dispatch(setFavData({publisher,title,recipeId,imageUrl,isFavorite}))
     }
     return( 
         <TouchableOpacity onPress={() => {navigation.navigate('RecipeById' , recipeId)}} style={styles.mainTouchableOpacityStyle}>
@@ -35,8 +34,8 @@ function RecipeBlock({imageUrl , publisher , title , recipeId}) {
             </View>
             <View style={styles.bottomViewStyle}>
                 <ImageBackground source={{uri:imageUrl}} style={styles.imageBackgroundStyle}>
-                    <TouchableOpacity disabled={isFavorite ? true : false} onPress={() => onPressHeart()} style={styles.favoriteButtonOpacityPosition}>
-                        <SvgComponentFavorite color={isFavorite ? colors.orange : null}/>   
+                    <TouchableOpacity disabled={isFavorite ? true : false} onPress={onPressHeart} style={styles.favoriteButtonOpacityPosition}>
+                        <SvgComponentFavorite color={fav  ? false : colors.orange}/>   
                     </TouchableOpacity>
                 </ImageBackground>
             </View>
